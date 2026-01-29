@@ -10,6 +10,18 @@ h1 { font-size: 50px; line-height: 64px; color: #222; }
 p { font-size: 16px; color: #465b52; margin: 15px 0 20px 0; }
 body { width: 100%; }
 
+button.nor{
+  font-size: 14px;
+  font-weight:600px;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor:pointer;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
 /* HEADER */
 #header {
   display: flex;
@@ -52,7 +64,7 @@ body { width: 100%; }
 
 /* For Animating Mobile Button Logic */
 #mobile-btn {
-  display: none; /
+  display: none; 
   position: relative;
   width: 30px;
   height: 30px;
@@ -84,52 +96,6 @@ body { width: 100%; }
 
 #mobile-btn.active .icon-cross {
   opacity: 1;
-}
-
-/* Making Responsive for mobile */
-@media (max-width: 700px) {
-    #header { padding: 15px 30px; }
-
-    #mobile-btn {
-        display: block; 
-    }
-
-    #navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
-        top: 0;
-        right: -300px;
-        width: 250px;
-        height: 100vh; 
-        background-color: #e3e6f3;
-        padding: 80px 20px;
-        transition: 0.3s ease;
-        border-radius: 0;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        z-index: 1000;
-    }
-
-    #navbar.active {
-        right: 0;
-    }
-
-    /* We remove the absolute positioning here so it stays inside the #mobile-btn */
-    #navbar li { padding: 15px 0; }
-    #navbar li a { font-size: 18px; }
-   
-    #navbar li img {
-        width: 22px;
-    }
-
-    /* Blur effect */
-    body.blur-bg > *:not(#header) {
-        filter: blur(5px);
-        pointer-events: none;
-        transition: 0.3s;
-    }
 }
 /*Home*/
 #hero {
@@ -170,15 +136,16 @@ body { width: 100%; }
   flex-wrap: wrap;
   width: 95%;
   margin-left: 2rem;
+  padding: 40px 80px;
 }
 #feature .fe-box {
   width: 180px;
   text-align: center;
-  padding: 25px 15px; /*t-b: 25, l-r: 15*/
+  padding: 25px 15px;           /*t-b: 25, l-r: 15*/
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03); /*x:20 y:20 radius:34 */
   border: 1px solid #cce7d8;
   border-radius: 4px;
-  margin: 15px 0;
+  margin: 20px 0;
 
   img {
     width: 100%;
@@ -297,4 +264,97 @@ body { width: 100%; }
     font-weight: 500;
     z-index: 10;
   }
+}
+
+#banner{
+  margin: 40px 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("img/b2.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 40vh;
+
+}
+h2{
+  font-size: 30px;
+  line-height: 54px;
+  color: #fff;
+  padding: 10px 0;
+}
+h4{
+  color: #fff;
+  font-size: 16px;
+}
+span{
+  color: #ef3636;
+}
+#banner button:hover{
+  background: #088178;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Making Responsive for mobile */
+@media (max-width: 700px) {
+    #header { padding: 15px 30px; }
+
+    #mobile-btn {
+        display: block; 
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 250px;
+        height: 100vh; 
+        background-color: #e3e6f3;
+        padding: 80px 20px;
+        transition: 0.3s ease;
+        border-radius: 0;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    #navbar.active {
+        right: 0;
+    }
+
+    /* We remove the absolute positioning here so it stays inside the #mobile-btn */
+    #navbar li { padding: 15px 0; }
+    #navbar li a { font-size: 18px; }
+   
+    #navbar li img {
+        width: 22px;
+    }
+
+    /* Blur effect */
+    body.blur-bg > *:not(#header) {
+        filter: blur(5px);
+        pointer-events: none;
+        transition: 0.3s;
+    }
 }
