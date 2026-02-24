@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1582769923195-c6e60dc1d8dc?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: 0px -650px;
+    /* background-repeat: no-repeat; */
+}
+.login-box{
+    width: 350px;
+    padding: 30px;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid #fff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.login-box h2{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.input-group{
+    margin-bottom: 20px;
+}
+.input-group label{
+    font-size: 14px;
+    color: #fff;
+}
+.input-group input{
+   width: 100%; 
+   padding: 10px;
+   margin-top: 6px;
+   border: none;
+   outline: none;
+   border-radius: 8px;
+   background: transparent;
+   border: 1px solid #fff;
+   color: #fff;
+   box-sizing: 0 0 5px rgba(0,0,0,0.1);
+}
+input::placeholder{
+    color: #fff;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.options label {
+    display: flex;        
+    align-items: center;  
+    gap: 5px;
+    line-height: 1;
+}
+.options input[type="checkbox"] {
+    margin: 0;            
+}
+.options a{
+    text-decoration: none;
+    color: #fff;
+}
+button{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.register{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+.register a{
+    padding-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}

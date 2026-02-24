@@ -1,0 +1,138 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("https://images.unsplash.com/photo-1726243204039-e350c8aa0c07?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 750px; /* slightly bigger box */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  justify-content: space-evenly;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input#taskInput {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button#addTaskBtn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button#addTaskBtn:hover {
+  background-color: #218838;
+}
+
+ul#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul#taskList li {
+  background: #e0e0e0;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  word-wrap: break-word;
+}
+
+/* Task text span for wrapping */
+ul#taskList li .task-text {
+  flex: 1;              /* takes available space */
+  margin-right: 10px;   /* space before buttons */
+  white-space: normal;  /* allow wrapping */
+  word-break: break-word;
+}
+
+/* Remove any old button:first-child rules! */
+
+/* Incomplete task button = blue */
+ul#taskList li:not(.completed) .complete-btn {
+  background-color: #007bff !important;
+  color: white;
+}
+
+/* Completed task button = grey */
+ul#taskList li.completed .complete-btn {
+  background-color: #6c757d !important;
+  color: white;
+}
+
+/* Hover effects */
+ul#taskList li:not(.completed) .complete-btn:hover {
+  background-color: #0069d9 !important;
+}
+
+ul#taskList li.completed .complete-btn:hover {
+  background-color: #5a6268 !important;
+}
+
+
+
+/* Buttons */
+ul#taskList button {
+  flex-shrink: 0;       /* prevent shrinking */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+ul#taskList button:first-child:hover {
+  background-color: #0069d9;
+}
+
+ul#taskList button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+ul#taskList button:last-child:hover {
+  background-color: #c82333;
+}
